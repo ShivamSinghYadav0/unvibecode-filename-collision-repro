@@ -1,0 +1,83 @@
+{
+  "schema_version": "shipreadyv2.connected_code_context.v1",
+  "selected_file": "api_user_service.py",
+  "context_scope": {
+    "size": "1",
+    "name": "Optimal connection context",
+    "estimated_tokens": 2541,
+    "maximum_tokens": 45000,
+    "included_files": [
+      "api_user_service.py",
+      "helper.py"
+    ],
+    "connected_files_not_included": [],
+    "selected_file_sections_not_included": []
+  },
+  "instructions": [
+    "Use the ordered code chunks as one connected context.",
+    "Cite original filenames and line numbers.",
+    "Treat only verified_cross_file_connections as established links.",
+    "If required evidence is absent, identify the missing file or function."
+  ],
+  "question": "[PASTE YOUR QUESTION HERE]",
+  "included_code_chunks": [
+    {
+      "chunk_id": "chunk_1dfbe4b578387455",
+      "file": "api_user_service.py",
+      "language": "python",
+      "line_range": {
+        "start_line": 1,
+        "end_line": 2
+      },
+      "kind": "whole_file",
+      "entity": null,
+      "qualified_name": null,
+      "parent_entity_id": null,
+      "estimated_tokens": 23,
+      "numbered_code": "     1 | from helper import normalize\n     2 | result = normalize('flat')",
+      "role_hints": [
+        "service_file"
+      ]
+    },
+    {
+      "chunk_id": "chunk_da4761d6a934a7ae",
+      "file": "helper.py",
+      "language": "python",
+      "line_range": {
+        "start_line": 1,
+        "end_line": 2
+      },
+      "kind": "whole_file",
+      "entity": null,
+      "qualified_name": null,
+      "parent_entity_id": null,
+      "estimated_tokens": 18,
+      "numbered_code": "     1 | def normalize(s):\n     2 |     return s.upper()",
+      "role_hints": []
+    }
+  ],
+  "verified_cross_file_connections": [
+    {
+      "source_chunk": "chunk_1dfbe4b578387455",
+      "source_file": "api_user_service.py",
+      "source_line": 1,
+      "relationship": "imports_symbol",
+      "symbol": "normalize",
+      "target_chunk": "chunk_da4761d6a934a7ae",
+      "target_file": "helper.py",
+      "target_line": 1,
+      "confidence": "high"
+    },
+    {
+      "source_chunk": "chunk_1dfbe4b578387455",
+      "source_file": "api_user_service.py",
+      "source_line": 1,
+      "relationship": "file_import",
+      "symbol": null,
+      "target_chunk": "chunk_da4761d6a934a7ae",
+      "target_file": "helper.py",
+      "target_line": 1,
+      "confidence": "high"
+    }
+  ]
+}
